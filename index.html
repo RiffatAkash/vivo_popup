@@ -1,0 +1,351 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>He Pack</title>
+    <meta name="author" content="Syful Islam">
+    <link rel="shortcut icon" type="image/x-icon" href="//purplepatch.online/assets/ico/favicon.ico">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+        }
+
+        .absolute{
+            position: absolute;
+        }
+
+
+        body,html{
+            height: 250px;
+            width: 300px;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            /*margin: auto;*/
+            /*padding: auto;*/
+        }
+
+        .alf_box,.alf_box_2,.alf_box_3,.alf_box_4{
+            height: 250px;
+            width: 300px;
+            /*background-image: url("//ms.purplepatch.online/slideanim/emami/he/preview1.jpg");*/
+            background-image: url("assets/main_slide/bg.jpg");
+            left: 0px;
+            top: 0px;
+            transition: .25s all ease;
+        }
+
+        .alf_box_2{
+            /* background-image: url("https://ms.purplepatch.online/slideanim/emami/he/02/bg.jpg"); */
+            left: -300px;
+        }
+        
+        .alf_box_2 .product_1{
+            bottom: 15px;
+            right: 0px;
+            left: 0px;
+            margin: 0 auto;
+            height: 153px;
+            width: 184px;
+        }
+
+        .alf_box_3{
+            /* background-image: url("https://ms.purplepatch.online/slideanim/emami/he/03/bg.jpg"); */
+            top: 250px;
+        }
+        
+        .alf_box_3 .product_2{
+            bottom: 15px;
+            right: 0px;
+            left: 0px;
+            margin: 0 auto;
+            height: 153px;
+            width: 184px;
+        }
+
+        .alf_box_4{
+            /* background-image: url("https://ms.purplepatch.online/slideanim/emami/he/04/bg.jpg"); */
+            left: 300px;
+        }
+
+        .alf_box_4 .product_3{
+            bottom: 15px;
+            right: 0px;
+            left: 0px;
+            margin: 0 auto;
+            height: 153px;
+            width: 184px;
+        }
+
+        .alf_box_r_pack{
+            height: 63px;
+            width: 69px;
+            background-image: url("assets/main_slide/1.png");
+            top: 80px;
+            left: 34px;
+            transition: all .25s linear;
+        }
+
+
+        .alf_box_g_pack{
+            height: 63px;
+            width: 69px;
+            background-image: url("assets/main_slide/2.png");
+            top: 80px;
+            left: 114px;
+            transition: all .25s linear;
+        }
+
+
+        .alf_box_b_pack{
+            height: 63px;
+            width: 69px;
+            background-image: url("assets/main_slide/3.png");
+            top: 82px;
+            left: 193px;
+            transition: all .25s linear;
+        }
+
+
+        .one {
+            background-image: url("assets/main_slide/1.png");
+            -webkit-animation: load 3s infinite;
+            animation: load 3s infinite;
+        }
+        .two {
+            background-image: url("assets/main_slide/2.png");
+            -webkit-animation: load 3s infinite 1s;
+            animation: load 3s infinite 1s;
+        }
+        .three {
+            background-image: url("assets/main_slide/3.png");
+            -webkit-animation: load 3s infinite 2s;
+            animation: load 3s infinite 2s;
+        }
+
+        @keyframes load {
+            0%,100% {
+                transform: scale(.95);
+            }
+            50% {
+                transform: scale(1);
+            }
+        }
+
+        .alf_box_cta{
+            height: 62px;
+            width: 118px;
+            background-image: url("assets/main_slide/eid.png");
+            left: 90px;
+            top: 10px;
+        }
+
+        [class*="alf_end_cta_"] {  /* WE USE * HERE */
+            height: 62px;
+            width: 118px;
+            background-image: url("assets/pop1/eid.png");
+            top: 10px;
+            left: 0px;
+            right: 0px;
+            margin: 0 auto;
+        }
+
+        .alf_end_cta_2{
+            background-image: url("assets/pop2/eid.png");
+        }
+
+        .alf_end_cta_3{
+            background-image: url("assets/pop3/eid.png");
+        }
+        .alf_phone{
+            height: 102px;
+            width: 106px;
+            background-image: url("assets/main_slide/phone.png");
+            left: 90px;
+            bottom: 0px;
+        }
+        .alf_plusicon{
+            height: 15px;
+            width: 146px;
+            background-image: url("assets/main_slide/plusicon.png");
+            left: 44px;
+            bottom: 107px;
+        }
+
+        @keyframes showZoomIn {
+           from {transform: scale3d(.5, .5, .5)}
+           to {transform: scale3d(1, 1, 1)}
+        }
+        .showZoomIn {animation-name: showZoomIn;animation-duration: 1.5s;animation-fill-mode: both}
+
+        @keyframes bottle {
+            0% {transform: rotateZ(0deg)}
+            10% {transform: rotateZ(-3deg)}
+            20% {transform: rotateZ(3deg)}
+            30% {transform: rotateZ(-3deg)}
+            40% {transform: rotateZ(3deg)}
+            50% {transform: rotateZ(-3deg)}
+            60% {transform: rotateZ(0deg)}
+        100% {transform: rotateZ(0deg) }
+        }
+        .bottle{animation: bottle 3s ease-in-out infinite;}
+
+        @keyframes pulse {
+            0% {transform: scaleX(1)}
+            50% {transform: scale3d(.9, .9, .9)}
+            to {transform: scaleX(1)}
+        }
+        .pulse {animation-name: pulse;animation-duration: 1s;animation-iteration-count: infinite;}
+
+
+        @keyframes bounceIn {
+            from,
+            20%,
+            40%,
+            60%,
+            80%,
+            to {
+                -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+
+            0% {
+                opacity: 0;
+                -webkit-transform: scale3d(0.3, 0.3, 0.3);
+                transform: scale3d(0.3, 0.3, 0.3);
+            }
+
+            20% {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            40% {
+                -webkit-transform: scale3d(0.9, 0.9, 0.9);
+                transform: scale3d(0.9, 0.9, 0.9);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(1.03, 1.03, 1.03);
+                transform: scale3d(1.03, 1.03, 1.03);
+            }
+
+            80% {
+                -webkit-transform: scale3d(0.97, 0.97, 0.97);
+                transform: scale3d(0.97, 0.97, 0.97);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+        }
+
+        [class*='bal_']{
+            height: 15px;
+            width: 66px;
+            background-image: url("https://ms.purplepatch.online/slideanim/emami/he/01/bal3.png");  
+            top: 220px;      
+        }
+
+        .bal_1{
+            left: 35px;
+        }
+
+        .bal_2{
+           background-image: url("https://ms.purplepatch.online/slideanim/emami/he/01/bal2.png");
+           left: 115px;  
+        }
+
+        .bal_3{
+           background-image: url("https://ms.purplepatch.online/slideanim/emami/he/01/bal1.png");
+           left: 195px;  
+        }
+    </style>
+</head>
+<body>
+<div class="alf_box absolute">
+    <div class="alf_box_cta absolute"></div>
+    <div class="alf_phone absolute"></div>
+    <div class="alf_plusicon absolute"></div>
+    <div class="alf_box_r_pack one absolute"></div>
+    <div class="one absolute"></div>
+    <div class="two absolute"></div>
+    <div class="three absolute"></div>
+    <div class="alf_box_g_pack two absolute"></div>
+    <div class="alf_box_b_pack three absolute"></div>
+</div>
+<a class="details" target="_blank" href="{CLICK_MACRO}">
+    <div class="alf_box_2 absolute">
+        <div class="alf_end_cta_1 absolute"></div>
+        <div class="product_1 absolute"><img src="assets/pop1/1.png" alt=""></div>
+    </div>
+</a>
+<a class="details" target="_blank" href="{CLICK_MACRO}">
+    <div class="alf_box_3 absolute">
+        <div class="alf_end_cta_2 absolute"></div>
+        <div class="product_2 bottle absolute"><img src="assets/pop2/2.png" alt=""></div>
+    </div>
+</a>
+<a class="details" target="_blank" href="{CLICK_MACRO}">
+    <div class="alf_box_4 absolute">
+        <div class="alf_end_cta_3 absolute"></div>
+        <div class="product_3 bottle absolute"><img src="assets/pop3/3.png" alt=""></div>
+    </div>
+</a>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+    $('.alf_box_r_pack').bind('click touchstart',()=>{
+        $('.alf_box_2').animate({left: '0'},300);
+        $('.alf_end_cta_1').addClass('showZoomIn');
+        $('.product_1').addClass('showZoomIn');
+        $('.product_1 img').addClass('bottle');
+        setTimeout(()=>{
+            $('.alf_box_2').animate({left: '-300'},500);
+            $('.alf_end_cta_1').removeClass('showZoomIn');
+            $('.product_1').removeClass('showZoomIn');
+            $('.product_1 img').removeClass('bottle');
+
+        },5e3)
+    });
+
+
+    $('.alf_box_g_pack').bind('click touchstart',()=>{
+        $('.alf_box_3').animate({top: '0'},300);
+        $('.alf_end_cta_2').addClass('showZoomIn');
+        $('.product_2').addClass('showZoomIn');
+        $('.product_2 img').addClass('bottle');
+        setTimeout(()=>{
+            $('.alf_box_3').animate({top: '250'},500);
+            $('.alf_end_cta_2').removeClass('showZoomIn');
+            $('.product_2').removeClass('showZoomIn');
+            $('.product_2 img').removeClass('bottle');
+        },5e3)
+    });
+
+
+    $('.alf_box_b_pack').bind('click touchstart',()=>{
+        $('.alf_box_4').animate({left: '0'},300);
+        $('.alf_end_cta_3').addClass('showZoomIn');
+        $('.product_3').addClass('showZoomIn');
+        $('.product_3 img').addClass('bottle');
+        setTimeout(()=>{
+            $('.alf_box_4').animate({left: '300'},500);
+            $('.alf_end_cta_3').removeClass('showZoomIn');
+            $('.product_3').removeClass('showZoomIn');
+            $('.product_3 img').removeClass('bottle');
+        },5e3)
+    });
+</script>
+</body>
+</html>
